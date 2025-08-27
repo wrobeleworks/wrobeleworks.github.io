@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wrobele - Apps, web platforms, AI</title>
+  <meta name="description" content="Wrobele builds delightful mobile & desktop apps, lean and secure web platforms, and bespoke AI solutions" />
+  <meta property="og:title" content="Wrobele" />
+  <meta property="og:description" content="Apps, web platforms & cozy games." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og.png" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50' y='58' text-anchor='middle' font-size='52' font-family='Arial' fill='white'>W</text></svg>">
+  <!-- Tailwind via CDN for quick start. For production, consider a local build. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          animation: {
+            float: 'float 10s ease-in-out infinite',
+            shimmer: 'shimmer 8s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '100%': { backgroundPosition: '100% 50%' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Soft gradient mesh background */
+    .mesh {
+      background: radial-gradient(30% 40% at 10% 15%, rgba(56,189,248,.35), transparent 60%),
+                  radial-gradient(25% 35% at 80% 20%, rgba(14,165,233,.35), transparent 60%),
+                  radial-gradient(30% 40% at 20% 80%, rgba(99,102,241,.30), transparent 60%),
+                  radial-gradient(25% 35% at 85% 75%, rgba(16,185,129,.30), transparent 60%),
+                  linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+    }
+    .glass { backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.06); }
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="mesh min-h-screen text-slate-200 font-display selection:bg-cyan-300 selection:text-slate-900">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40">
+    <div class="glass border-b border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl bg-cyan-500 grid place-items-center text-slate-900 font-extrabold">W</div>
+          <span class="text-lg tracking-tight font-semibold">Wrobele</span>
+        </a>
+        <nav class="hidden md:flex gap-8 text-sm">
+        </nav>
+        <a href="#contact" class="inline-flex items-center rounded-2xl bg-cyan-500/90 px-4 py-2 text-slate-900 font-semibold shadow-lg hover:bg-cyan-400 transition">Contact us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            <span class="bg-gradient-to-r from-cyan-300 via-sky-400 to-indigo-300 bg-clip-text text-transparent animate-[shimmer] bg-[length:200%_100%]">Wrobele</span>
+          </h1>
+          <p class="mt-6 text-lg text-slate-300 max-w-2xl">We build delightful apps, lean web platforms, and bespoke AI solutions.</p>
+          <div class="mt-10 flex items-center gap-6 opacity-80">
+            <div class="text-xs uppercase tracking-wider text-slate-400">Tech we enjoy</div>
+            <ul class="flex flex-wrap gap-3 text-sm">
+              <li class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Go, Rust</li>
+              <li class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Swift, Kotlin</li>
+              <li class="px-3 py-1 rounded-full bg-white/5 border border-white/10">Postgres, SQLite</li>
+              <li class="px-3 py-1 rounded-full bg-white/5 border border-white/10">JS, TS</li>
+              <li class="px-3 py-1 rounded-full bg-white/5 border border-white/10">AWS, K8S</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">What we do</h2>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-3xl border border-white/10 p-6">
+          <div class="text-xl font-semibold">Mobile & Desktop</div>
+          <p class="mt-3 text-slate-400">Applications for all platforms.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+            <li>iOS & Android</li>
+            <li>Mac & Windows</li>
+            <li>Browser extensions</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl border border-white/10 p-6">
+          <div class="text-xl font-semibold">Web Platforms</div>
+          <p class="mt-3 text-slate-400">Domain-focused web services and integrations.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+            <li>Built with battle-tested technologies</li>
+            <li>Test-driven development</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl border border-white/10 p-6">
+          <div class="text-xl font-semibold">AI solutions</div>
+          <p class="mt-3 text-slate-400">End-to-end AI deployments.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+            <li>Infrastructure and Ops</li>
+            <li>Training and feature-engineering</li>
+            <li>Inference and Integrations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Contact us</h2>
+      </div>
+      <form name="contact" class="mt-10 grid md:grid-cols-2 gap-6" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="md:col-span-1">
+          <label class="block text-sm text-slate-400 mb-2" for="name">Your name</label>
+          <input id="name" name="name" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400" />
+        </div>
+        <div class="md:col-span-1">
+          <label class="block text-sm text-slate-400 mb-2" for="email">Email</label>
+          <input id="email" type="email" name="email" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm text-slate-400 mb-2" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400"></textarea>
+        </div>
+        <div class="md:col-span-2 flex items-center justify-between">
+          <p class="text-sm text-slate-400">Prefer email? <a class="underline decoration-dotted" href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
+          <button class="rounded-2xl bg-cyan-500/90 px-6 py-3 text-slate-900 font-semibold shadow-lg hover:bg-cyan-400 transition" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Company details card -->
+  <section id="company" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Company details</h2>
+      </div>
+      <div class="mt-10">
+        <div class="glass rounded-3xl border border-white/10 p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl">🏢</div>
+            <div class="w-full">
+              <dl class="grid sm:grid-cols-3 gap-x-6 gap-y-2 text-sm">
+                <!-- Row 1: labels -->
+                <dt class="text-slate-400">Name</dt>
+                <dt class="text-slate-400">Address</dt>
+                <dt class="text-slate-400">e-mail</dt>
+                <!-- Row 1: values -->
+                <dd class="font-medium">Wrobele sp. z o.o.</dd>
+                <dd class="font-medium not-italic">
+                  ul. Dyrekcyjna 1-142<br />
+                  50-528 Wrocław, Poland
+                </dd>
+                <dd class="font-medium">
+                  <a href="mailto:hello@wrobele.com" class="underline decoration-dotted">hello@wrobele.com</a>
+                </dd>
+
+                <!-- Row 2: labels -->
+                <dt class="mt-4 text-slate-400">NIP</dt>
+                <dt class="mt-4 text-slate-400">KRS</dt>
+                <dt class="mt-4 text-slate-400">D-U-N-S</dt>
+                <!-- Row 2: values -->
+                <dd class="font-medium">8993012313</dd>
+                <dd class="font-medium">0001145726</dd>
+                <dd class="font-medium">123456789</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex flex-col gap-1">
+        <p class="text-slate-400">© <span id="y"></span> Wrobele. All rights reserved.</p>
+        <p class="text-xs text-slate-500">Wrobele sp. z o.o. is a company registered in Poland - NIP: 8993012313 · KRS: 0001145726</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/wrobele" class="hover:underline" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://wrobele.com" class="hover:underline" target="_blank" rel="noreferrer">wrobele.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set year dynamically
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
