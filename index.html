@@ -135,20 +135,16 @@
       </div>
       <form name="contact" class="mt-10 grid md:grid-cols-2 gap-6" data-netlify="true">
         <input type="hidden" name="form-name" value="contact">
-        <div class="md:col-span-1">
-          <label class="block text-sm text-slate-400 mb-2" for="name">Your name</label>
-          <input id="name" name="name" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400" />
-        </div>
-        <div class="md:col-span-1">
-          <label class="block text-sm text-slate-400 mb-2" for="email">Email</label>
-          <input id="email" type="email" name="email" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400" />
+        <div class="md:col-span-2">
+          <label class="block text-sm text-slate-400 mb-2" for="subject">Subject</label>
+          <input id="subject" name="subject" placeholder="Subject" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400" />
         </div>
         <div class="md:col-span-2">
           <label class="block text-sm text-slate-400 mb-2" for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400"></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Hi Wrobele!" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400"></textarea>
         </div>
         <div class="md:col-span-2 flex items-center justify-between">
-          <p class="text-sm text-slate-400">Prefer email? <a class="underline decoration-dotted" href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
+          <p class="text-sm text-slate-400">MailTo form for <a class="underline decoration-dotted" href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
           <button class="rounded-2xl bg-cyan-500/90 px-6 py-3 text-slate-900 font-semibold shadow-lg hover:bg-cyan-400 transition" type="submit">Send</button>
         </div>
       </form>
@@ -188,7 +184,7 @@
                 <!-- Row 2: values -->
                 <dd class="font-medium">8993012313</dd>
                 <dd class="font-medium">0001145726</dd>
-                <dd class="font-medium">123456789</dd>
+                <dd class="font-medium">665212362</dd>
               </dl>
             </div>
           </div>
@@ -214,7 +210,30 @@
   <script>
     // Set year dynamically
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Turn contact form submission into a populated mailto link
+    (function () {
+      const form = document.querySelector('form[name="contact"]');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const message = (form.querySelector('#message')?.value || '').trim();
+        const subjectInput = (form.querySelector('#subject')?.value || '').trim();
+
+        const to = 'hello@wrobele.com';
+        const subject = subjectInput || `Website Contact Form Inquiry`;
+        const body = [
+          message,
+        ].join('\n');
+
+        const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open the user's email client with prefilled details
+        window.location.href = mailto;
+      });
+    })();
   </script>
 </body>
 </html>
-
