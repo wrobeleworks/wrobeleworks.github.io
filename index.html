@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wrobele - Apps, web platforms, AI</title>
+  <title>Wrobele — Apps, Web Platforms, AI</title>
   <meta name="description" content="Wrobele builds delightful mobile & desktop apps, lean and secure web platforms, and bespoke AI solutions" />
   <meta property="og:title" content="Wrobele" />
   <meta property="og:description" content="Apps, web platforms & cozy games." />
@@ -14,21 +14,59 @@
   <!-- Local Tailwind build -->
   <link rel="stylesheet" href="styles/tailwind.css">
   <style>
-    /* Linear navy background */
+    /* Modern dark surface with subtle grid + glow */
     .mesh {
-      background: linear-gradient(135deg, #0b1220 0%, #0f2345 100%);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(14,165,233,0.08), transparent 60%),
+        radial-gradient(800px 400px at 110% 10%, rgba(99,102,241,0.07), transparent 55%),
+        linear-gradient(135deg, #0a0f1d 0%, #0d1b34 100%);
+      position: relative;
+    }
+    .mesh::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px) 0 0 / 24px 24px,
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px) 0 0 / 24px 24px;
+      mask: radial-gradient(1000px 600px at 50% 0%, #000 40%, transparent 75%);
     }
     .glass { backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.06); }
+    .glass-strong { backdrop-filter: blur(16px); background-color: rgba(255,255,255,0.08); }
 
-    /* Tailwind v4 local build helpers */
-    .font-display { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+    /* Typography */
+    .font-display { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; }
+
+    /* Accents */
+    .accent { background-image: linear-gradient(to right in oklab, var(--color-cyan-300), var(--color-sky-400), var(--color-indigo-300)); }
+    .ringy { box-shadow: 0 0 0 1px color-mix(in oklab, white 12%, transparent) inset; }
+
+    /* Hero orb */
+    .orb {
+      position: relative;
+      aspect-ratio: 1/1;
+      border-radius: 24px;
+      background:
+        radial-gradient(100% 100% at 30% 30%, rgba(14,165,233,0.35), transparent 60%),
+        radial-gradient(120% 120% at 80% 120%, rgba(99,102,241,0.25), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      overflow: hidden;
+    }
+    .orb::after {
+      content: "";
+      position: absolute; inset: -1px;
+      background: radial-gradient(120% 80% at 50% 10%, rgba(255,255,255,0.18), transparent 40%);
+      mix-blend-mode: overlay;
+    }
+
     @keyframes shimmer {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
   </style>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="mesh min-h-screen text-slate-200 font-display selection:bg-cyan-300 selection:text-slate-900">
   <!-- Nav -->
@@ -39,9 +77,12 @@
           <div class="w-8 h-8 rounded-xl bg-cyan-500 grid place-items-center text-slate-900 font-extrabold">W</div>
           <span class="text-lg tracking-tight font-semibold">Wrobele</span>
         </a>
-        <nav class="hidden md:flex gap-8 text-sm">
+        <nav class="hidden md:flex gap-6 text-sm items-center">
+          <a href="#services" class="opacity-80 hover:opacity-100 transition">Services</a>
+          <a href="#company" class="opacity-80 hover:opacity-100 transition">Company</a>
+          <a href="#contact" class="opacity-80 hover:opacity-100 transition">Contact</a>
         </nav>
-        <a href="#contact" class="inline-flex items-center rounded-2xl bg-cyan-500/90 px-4 py-2 text-slate-900 font-semibold shadow-lg hover:bg-cyan-400 transition">Contact us</a>
+        <a href="#contact" class="inline-flex items-center rounded-2xl accent text-slate-900 px-4 py-2 font-semibold shadow-lg hover:opacity-90 transition ringy">Let’s talk</a>
       </div>
     </div>
   </header>
@@ -54,7 +95,11 @@
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
             <span class="bg-gradient-to-r from-cyan-300 via-sky-400 to-indigo-300 bg-clip-text text-transparent animate-[shimmer_8s_linear_infinite] bg-[length:200%_100%]">Wrobele</span>
           </h1>
-          <p class="mt-6 text-lg text-slate-300 max-w-2xl">We build delightful apps, lean web platforms, and bespoke AI solutions.</p>
+          <p class="mt-6 text-lg text-slate-300 max-w-2xl">We craft delightful apps, lean web platforms, and bespoke AI solutions.</p>
+          <div class="mt-8 flex gap-4">
+            <a href="#contact" class="inline-flex items-center rounded-2xl accent text-slate-900 px-6 py-3 font-semibold shadow-lg hover:opacity-90 transition ringy">Get in touch</a>
+            <a href="#services" class="inline-flex items-center rounded-2xl px-6 py-3 font-semibold border border-white/10 hover:border-white/20 transition">What we do</a>
+          </div>
           <div class="mt-10 flex items-center gap-6 opacity-80">
             <div class="text-xs uppercase tracking-wider text-slate-400">Tech we enjoy</div>
             <ul class="flex flex-wrap gap-3 text-sm">
@@ -65,6 +110,9 @@
               <li class="px-3 py-1 rounded-full bg-white/5 border border-white/10">AWS, K8S</li>
             </ul>
           </div>
+        </div>
+        <div class="lg:col-span-5 hidden lg:block">
+          <div class="orb ringy"></div>
         </div>
       </div>
     </div>
@@ -77,7 +125,7 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold">What we do</h2>
       </div>
       <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="glass rounded-3xl border border-white/10 p-6">
+        <div class="glass-strong rounded-3xl border border-white/10 p-6 ringy">
           <div class="text-xl font-semibold">Mobile & Desktop</div>
           <p class="mt-3 text-slate-400">Applications for all platforms.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
@@ -86,7 +134,7 @@
             <li>Browser extensions</li>
           </ul>
         </div>
-        <div class="glass rounded-3xl border border-white/10 p-6">
+        <div class="glass-strong rounded-3xl border border-white/10 p-6 ringy">
           <div class="text-xl font-semibold">Web Platforms</div>
           <p class="mt-3 text-slate-400">Domain-focused web services and integrations.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
@@ -94,7 +142,7 @@
             <li>Test-driven development</li>
           </ul>
         </div>
-        <div class="glass rounded-3xl border border-white/10 p-6">
+        <div class="glass-strong rounded-3xl border border-white/10 p-6 ringy">
           <div class="text-xl font-semibold">AI solutions</div>
           <p class="mt-3 text-slate-400">End-to-end AI deployments.</p>
           <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
@@ -128,7 +176,7 @@
         </div>
         <div class="md:col-span-2 flex items-center justify-between">
           <p class="text-sm text-slate-400">MailTo form for <a class="underline decoration-dotted" href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
-          <button class="rounded-2xl bg-cyan-500/90 px-6 py-3 text-slate-900 font-semibold shadow-lg hover:bg-cyan-400 transition" type="submit">Send</button>
+          <button class="rounded-2xl accent px-6 py-3 text-slate-900 font-semibold shadow-lg hover:opacity-90 transition ringy" type="submit">Send</button>
         </div>
       </form>
     </div>
@@ -141,7 +189,7 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold">Company details</h2>
       </div>
       <div class="mt-10">
-        <div class="glass rounded-3xl border border-white/10 p-6">
+        <div class="glass-strong rounded-3xl border border-white/10 p-6 ringy">
           <div class="flex items-start gap-4">
             <div class="text-3xl">🏢</div>
             <div class="w-full">
