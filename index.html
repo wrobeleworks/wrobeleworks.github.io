@@ -233,6 +233,35 @@
         // Open the user's email client with prefilled details
         window.location.href = mailto;
       });
+
+      // Rotate placeholder suggestions for the Subject field
+      const subjectEl = form.querySelector('#subject');
+      if (subjectEl) {
+        const suggestions = [
+          'AI-powered onboarding',
+          'High-contrast mode for dashboard',
+          'Unexpected 403 from the API',
+          'Adding animated state transitions',
+          'Slack alerts for failures',
+          'Faster cold start times',
+          'AI-powered data insights',
+          'New items for the wiki',
+          'More keyboard shortcut ideas',
+          'Retry strategy for webhooks',
+          'SSO support for Azure AD'
+        ];
+
+        let i = 0;
+        const updatePlaceholder = () => {
+          if (document.activeElement === subjectEl) return;
+          if ((subjectEl.value || '').trim().length > 0) return;
+          subjectEl.placeholder = suggestions[i % suggestions.length];
+          i += 1;
+        };
+
+        updatePlaceholder();
+        setInterval(updatePlaceholder, 2500);
+      }
     })();
   </script>
 </body>
