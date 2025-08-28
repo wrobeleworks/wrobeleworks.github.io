@@ -11,40 +11,21 @@
   <meta property="og:image" content="/og.png" />
   <meta name="theme-color" content="#0ea5e9" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50' y='58' text-anchor='middle' font-size='52' font-family='Arial' fill='white'>W</text></svg>">
-  <!-- Tailwind via CDN for quick start. For production, consider a local build. -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
-          animation: {
-            float: 'float 10s ease-in-out infinite',
-            shimmer: 'shimmer 8s linear infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-10px)' }
-            },
-            shimmer: {
-              '0%': { backgroundPosition: '0% 50%' },
-              '100%': { backgroundPosition: '100% 50%' }
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Local Tailwind build -->
+  <link rel="stylesheet" href="styles/tailwind.css">
   <style>
-    /* Lighter, subtle linear gradient background */
+    /* Linear navy background */
     .mesh {
-      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: linear-gradient(135deg, #0b1220 0%, #0f2345 100%);
     }
-    /* Softer glass to suit the lighter background */
-    .glass { backdrop-filter: blur(8px); background-color: rgba(255,255,255,0.7); }
+    .glass { backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.06); }
+
+    /* Tailwind v4 local build helpers */
+    .font-display { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
   </style>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -71,7 +52,7 @@
       <div class="grid lg:grid-cols-12 gap-16 items-center">
         <div class="lg:col-span-7">
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-            <span class="bg-gradient-to-r from-cyan-300 via-sky-400 to-indigo-300 bg-clip-text text-transparent animate-[shimmer] bg-[length:200%_100%]">Wrobele</span>
+            <span class="bg-gradient-to-r from-cyan-300 via-sky-400 to-indigo-300 bg-clip-text text-transparent animate-[shimmer_8s_linear_infinite] bg-[length:200%_100%]">Wrobele</span>
           </h1>
           <p class="mt-8 text-lg text-slate-700 max-w-2xl">We build delightful apps, lean web platforms, and bespoke AI solutions.</p>
           <div class="mt-12 flex items-center gap-8">
@@ -134,21 +115,20 @@
       </div>
       <form name="contact" class="mt-10 grid md:grid-cols-2 gap-6" data-netlify="true">
         <input type="hidden" name="form-name" value="contact">
-        <div class="md:col-span-1">
-          <label class="block text-sm text-slate-600 mb-2" for="name">Your name</label>
-          <input id="name" name="name" required class="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 outline-none focus:border-cyan-500" />
-        </div>
-        <div class="md:col-span-1">
-          <label class="block text-sm text-slate-600 mb-2" for="email">Email</label>
-          <input id="email" type="email" name="email" required class="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 outline-none focus:border-cyan-500" />
+        <div class="md:col-span-2">
+          <label class="block text-sm text-slate-400 mb-2" for="subject">Subject</label>
+          <div class="relative">
+            <input id="subject" name="subject" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400" />
+            <span id="subject-suggestion" aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-4 flex items-center text-slate-400/70 transition-opacity duration-300"></span>
+          </div>
         </div>
         <div class="md:col-span-2">
-          <label class="block text-sm text-slate-600 mb-2" for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required class="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 outline-none focus:border-cyan-500"></textarea>
+          <label class="block text-sm text-slate-400 mb-2" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Hi Wrobele!" required class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-cyan-400"></textarea>
         </div>
         <div class="md:col-span-2 flex items-center justify-between">
-          <p class="text-sm text-slate-600">Prefer email? <a class="underline decoration-dotted" href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
-          <button class="rounded-2xl bg-cyan-600 px-6 py-3 text-white font-semibold shadow-lg hover:bg-cyan-500 transition" type="submit">Send</button>
+          <p class="text-sm text-slate-400">MailTo form for <a class="underline decoration-dotted" href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
+          <button class="rounded-2xl bg-cyan-500/90 px-6 py-3 text-slate-900 font-semibold shadow-lg hover:bg-cyan-400 transition" type="submit">Send</button>
         </div>
       </form>
     </div>
@@ -187,7 +167,7 @@
                 <!-- Row 2: values -->
                 <dd class="font-medium">8993012313</dd>
                 <dd class="font-medium">0001145726</dd>
-                <dd class="font-medium">123456789</dd>
+                <dd class="font-medium">665212362</dd>
               </dl>
             </div>
           </div>
@@ -213,6 +193,86 @@
   <script>
     // Set year dynamically
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Turn contact form submission into a populated mailto link
+    (function () {
+      const form = document.querySelector('form[name="contact"]');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const message = (form.querySelector('#message')?.value || '').trim();
+        const subjectInput = (form.querySelector('#subject')?.value || '').trim();
+
+        const to = 'hello@wrobele.com';
+        const subject = subjectInput || `Website Contact Form Inquiry`;
+        const body = [
+          message,
+        ].join('\n');
+
+        const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open the user's email client with prefilled details
+        window.location.href = mailto;
+      });
+
+      // Animated subject suggestions (overlay with fade)
+      const subjectEl = form.querySelector('#subject');
+      const suggestionEl = form.querySelector('#subject-suggestion');
+      if (subjectEl && suggestionEl) {
+        const suggestions = [
+          'AI-powered onboarding',
+          'High-contrast mode for dashboard',
+          'Unexpected 403 on API endpoint',
+          'Smoother list reordering',
+          'Slack alerts for failures',
+          'Faster cold start times',
+          'Vision-based SKU scanner',
+          'Pricing page clarity',
+          'Keyboard nav for modals',
+          'Retry strategy for webhooks',
+          'Extract billing service',
+          'SSO rollout timeline'
+        ];
+
+        let i = 0;
+        const isEmpty = () => (subjectEl.value || '').trim().length === 0;
+        const isUnfocused = () => document.activeElement !== subjectEl;
+
+        const fadeTo = (text) => {
+          suggestionEl.classList.add('opacity-0');
+          setTimeout(() => {
+            suggestionEl.textContent = text;
+            if (isEmpty() && isUnfocused()) suggestionEl.classList.remove('opacity-0');
+          }, 180);
+        };
+
+        // Initial suggestion and visibility
+        suggestionEl.textContent = suggestions[0];
+        i = 1;
+        if (!isEmpty() || !isUnfocused()) suggestionEl.classList.add('opacity-0');
+
+        // Cycle every 2s when not typing
+        setInterval(() => {
+          if (!isEmpty() || !isUnfocused()) return;
+          fadeTo(suggestions[i % suggestions.length]);
+          i += 1;
+        }, 2000);
+
+        // Hide/show while interacting
+        const sync = () => {
+          if (isEmpty() && isUnfocused()) {
+            suggestionEl.classList.remove('opacity-0');
+          } else {
+            suggestionEl.classList.add('opacity-0');
+          }
+        };
+        subjectEl.addEventListener('focus', sync);
+        subjectEl.addEventListener('blur', sync);
+        subjectEl.addEventListener('input', sync);
+      }
+    })();
   </script>
 </body>
 </html>

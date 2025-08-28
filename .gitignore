@@ -1,0 +1,7 @@
+node_modules
+# Keep built CSS committed for GitHub Pages
+# styles/tailwind.css
+# styles/tailwind.css.map
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
