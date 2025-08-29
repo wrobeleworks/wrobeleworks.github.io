@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Wrobele — Apps, Web Platforms, AI</title>
-    <meta name="description" content="Wrobele builds delightful mobile & desktop apps, lean and secure web platforms, and bespoke AI solutions" />
+    <meta name="description" content="Wrobele design intuitive apps, scalable platforms, and AI solutions that move ideas forward." />
     <meta property="og:title" content="Wrobele" />
     <meta property="og:description" content="Apps, web platforms & cozy games." />
     <meta property="og:type" content="website" />
@@ -21,6 +21,14 @@
       /* Center custom logo image inside the circular logo */
       #header .logo { display: grid; place-items: center; }
       #header .logo img { width: 3.5rem; height: 3.5rem; display: block; }
+      /* Card grid layout reused for Services + Company */
+      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+      .feature { background: rgba(27,31,34,0.5); border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; padding: 1rem 1.25rem; }
+      .feature h3 { margin: 0 0 0.35rem; letter-spacing: .15rem; text-transform: uppercase; font-weight: 600; }
+      .feature > p { margin: 0 0 .75rem; opacity: .85; }
+      .feature ul { margin: 0; padding-left: 1.1rem; }
+      .feature ul li { margin: .25rem 0; }
+      @media (max-width: 736px) { .features { grid-template-columns: 1fr; } }
     </style>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   </head>
@@ -56,33 +64,35 @@
         <!-- Services -->
         <article id="services">
           <h2 class="major">What we do</h2>
-          <p>We craft delightful apps, lean web platforms, and bespoke AI solutions.</p>
-          <section>
-            <h3>Mobile & Desktop</h3>
-            <p>Applications for all platforms.</p>
-            <ul>
-              <li>iOS & Android</li>
-              <li>Mac & Windows</li>
-              <li>Browser extensions</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Web Platforms</h3>
-            <p>Domain-focused web services and integrations.</p>
-            <ul>
-              <li>Built with battle-tested technologies</li>
-              <li>Test-driven development</li>
-            </ul>
-          </section>
-          <section>
-            <h3>AI solutions</h3>
-            <p>End-to-end AI deployments.</p>
-            <ul>
-              <li>Infrastructure and Ops</li>
-              <li>Training and feature-engineering</li>
-              <li>Inference and Integrations</li>
-            </ul>
-          </section>
+          <p>We design intuitive apps, scalable platforms, and AI solutions that move ideas forward.</p>
+          <div class="features">
+            <section class="feature">
+              <h3>Mobile & Desktop</h3>
+              <p>Applications for all platforms.</p>
+              <ul>
+                <li>iOS & Android</li>
+                <li>Mac & Windows</li>
+                <li>Browser extensions</li>
+              </ul>
+            </section>
+            <section class="feature">
+              <h3>Web Platforms</h3>
+              <p>Domain-focused web services and integrations.</p>
+              <ul>
+                <li>Built with battle-tested technologies</li>
+                <li>Test-driven development</li>
+              </ul>
+            </section>
+            <section class="feature">
+              <h3>AI solutions</h3>
+              <p>End-to-end AI deployments.</p>
+              <ul>
+                <li>Infrastructure and Ops</li>
+                <li>Training and feature-engineering</li>
+                <li>Inference and Integrations</li>
+              </ul>
+            </section>
+          </div>
         </article>
 
         <!-- Projects -->
@@ -94,13 +104,32 @@
         <!-- Company -->
         <article id="company">
           <h2 class="major">Company details</h2>
-          <p><strong>Name:</strong> Wrobele sp. z o.o.</p>
-          <p><strong>Address:</strong><br />ul. Dyrekcyjna 1-142<br />50-528 Wrocław, Poland</p>
-          <p><strong>Email:</strong> <a href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
-          <hr />
-          <p><strong>NIP:</strong> 8993012313</p>
-          <p><strong>KRS:</strong> 0001145726</p>
-          <p><strong>D-U-N-S:</strong> 665212362</p>
+          <div class="features">
+            <section class="feature">
+              <h3>Name</h3>
+              <p>Wrobele sp. z o.o.</p>
+            </section>
+            <section class="feature">
+              <h3>Address</h3>
+              <p>ul. Dyrekcyjna 1-142<br />50-528 Wrocław, Poland</p>
+            </section>
+            <section class="feature">
+              <h3>Email</h3>
+              <p><a href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
+            </section>
+            <section class="feature">
+              <h3>NIP</h3>
+              <p>8993012313</p>
+            </section>
+            <section class="feature">
+              <h3>KRS</h3>
+              <p>0001145726</p>
+            </section>
+            <section class="feature">
+              <h3>D-U-N-S</h3>
+              <p>665212362</p>
+            </section>
+          </div>
         </article>
 
         <!-- Contact -->
