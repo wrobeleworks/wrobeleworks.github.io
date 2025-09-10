@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Buoyant Timer — Support | Wrobele</title>
+    <meta name="description" content="Support for Buoyant Timer — an always-on-top macOS timer with countdown and stopwatch, click-through, customizable colors, opacity, and high-contrast mode." />
+    <meta property="og:title" content="Buoyant Timer — Support" />
+    <meta property="og:description" content="Always-on-top timer for macOS with countdown and stopwatch, click-through, and customizable appearance." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="icon" href="/images/logo-bird.svg">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <style>
+      /* Simple, readable page layout without template foreground */
+      .page-header { max-width: 52rem; margin: 0 auto 1rem; text-align: center; }
+      .page-header .logo { display: inline-grid; place-items: center; }
+      .page-header .logo img { width: 3rem; height: 3rem; display: block; }
+      .page-header h1 { margin: .75rem 0 0; letter-spacing: .15rem; text-transform: uppercase; }
+      .page-nav { text-align: center; margin-top: .5rem; }
+      .page-nav .button { margin: 0 .25rem; }
+
+      .page { max-width: 52rem; margin: 1rem auto 0; background: rgba(27,31,34,.85); border-radius: 6px; padding: 2rem 1.5rem; position: relative; z-index: 3; }
+      .page h2.major { margin-top: 0; }
+      .page .lead { opacity: .9; }
+      .muted { opacity: .8; }
+      .toc { margin: 0 0 1.25rem; padding-left: 1.25rem; }
+      .faq q { font-weight: 600; }
+      .faq .qa { margin: 0 0 1rem; }
+      .note { font-size: .95rem; opacity: .9; }
+      .label { display: inline-block; font-size: .75rem; letter-spacing: .08rem; text-transform: uppercase; opacity: .9; border: 1px solid rgba(255,255,255,.25); border-radius: 4px; padding: .15rem .4rem; }
+      footer#footer { position: relative; z-index: 3; }
+    </style>
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="page-header">
+        <!-- <div class="logo"><img src="icon.masked.1024.png" width="4rem" alt="Buoyant Timer logo"></div> -->
+         <img src="icon_256x256.png" width="130rem" alt="Buoyant Timer logo">
+        <h1>Buoyant Timer</h1>
+        <p class="muted">Always-on-top timer for macOS</p>
+        <div class="page-nav">
+          <a href="/index.html#projects" class="button">Back to Projects</a>
+          <!-- <a href="#" class="button primary">Mac App Store</a> -->
+          <a href="mailto:hello@wrobele.com" class="button">Support</a>
+        </div>
+      </div>
+
+      <main class="page" id="content">
+        <h2 class="major">Overview</h2>
+        <p class="lead">Buoyant Timer is a lightweight, always-on-top timer for macOS with countdown and stopwatch modes. It supports click-through, stays on top of full-screen apps, and offers appearance customization.</p>
+
+        <h3 id="features">Features</h3>
+        <ul>
+          <li>Always on top: remains visible over other windows, including full-screen apps.</li>
+          <li>Two modes: countdown and stopwatch.</li>
+          <li>Click-through: lets your clicks pass to underlying apps for uninterrupted workflow.</li>
+          <li>Adjustable countdowns: set durations up to 60 minutes.</li>
+          <li>Appearance controls: choose colors and opacity to fit your desktop.</li>
+          <li>High-contrast mode: optional higher-contrast colorway for improved legibility.</li>
+        </ul>
+
+        <h3 id="faq">FAQ</h3>
+        <div class="faq">
+          <p class="qa"><q>Does the timer stay on top of full-screen apps?</q><br>Yes. Buoyant Timer is designed to stay on top, including when other apps are in full-screen.</p>
+          <p class="qa"><q>What is click-through and when should I use it?</q><br>Click-through lets mouse clicks pass through the timer to the app beneath it. <br>Use it to keep the timer visible without intercepting clicks during focused work.</p>
+          <p class="qa"><q>How do I interact with the timer if click-through is on?</q><br>There are two options - either with global hotkeys, or by disabling click-through<br>You can use global hotkeys to start/stop, pause, reset and start the countdowns. <br>Then re-enable click-through to return to undistracting mode.</p>
+          <p class="qa"><q>What are the global hotkeys?</q><br>Global hotkeys are keyboard shortcuts that allow you to control the timer with just the keyboard.<br>
+            <table>
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Combination</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Start/Stop</td>
+                <td>⌘⌥⌃ S</td>
+              </tr>
+              <tr>
+                <td>Reset</td>
+                <td>⌘⌥⌃ R</td>
+              </tr>
+              <tr>
+                <td>Start countdown J</td>
+                <td>⌘⌥⌃ J</td>
+              </tr>
+              <tr>
+                <td>Start countdown K</td>
+                <td>⌘⌥⌃ K</td>
+              </tr>
+            </tbody>
+            </table>
+          </p>
+          <p class="qa"><q>What exactly is the Auto-start stopwatch option?</q><br>Enabling this option will automatically start the stopwatch when the countdown lapses. <br>This helps when you don't want to lose track of the time that may have passed since the countdown ended.</p>
+          <p class="qa"><q>How long can a countdown be?</q><br>Countdowns support durations up to 60 minutes.</p>
+          <p class="qa"><q>Why does the stopwatch stop at 59:59?</q><br>This is an intentional design choice to keep the component compact and legible. <br>For longer tracking, consider using a full 1-hour countdown with the auto-start stopwatch option enabled. <br>This will then automatically start a stopwatch when the countdown lapses - giving you a total of 2 hours of tracking.</p>
+          <p class="qa"><q>Can I change colors or opacity?</q><br>Yes. You can choose from different color options and adjust opacity. <br>There's also a higher-contrast color mode for improved readability.</p>
+          <p class="qa"><q>Will it disrupt my workflow?</q><br>No. With click-through enabled, Buoyant Timer stays visible and unobtrusive, allowing you to interact with the apps beneath it. <br>With adjustable opacity, you can make it less distracting while still keeping it visible.</p>
+        </div>
+
+        <h3 id="limitations">Known limitations & design choices</h3>
+        <ul>
+          <li>Stopwatch tops out at 1 hour</li>
+          <li>Countdowns cannot exceed 1 hour.</li>
+        </ul>
+
+
+
+        <h3 id="contact">Contact</h3>
+        <p>Need help or have feedback? Reach us at <a href="mailto:hello@wrobele.com">hello@wrobele.com</a>.</p>
+      </main>
+
+      <footer id="footer">
+        <p class="copyright">© <span id="y"></span> Wrobele. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+      </footer>
+    </div>
+
+    <div id="bg"></div>
+
+    <script>
+      // Year placeholder
+      (function(){ var yEl = document.getElementById('y'); if (yEl) yEl.textContent = new Date().getFullYear(); })();
+    </script>
+  </body>
+</html>
