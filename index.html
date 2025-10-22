@@ -4,212 +4,266 @@
   Template license: CCA 3.0 (html5up.net/license)
 -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Wrobele — Apps, Web Platforms, AI</title>
-    <meta name="description" content="Wrobele design intuitive apps, scalable platforms, and AI solutions that move ideas forward." />
-    <meta property="og:title" content="Wrobele" />
-    <meta property="og:description" content="Apps, web platforms & cozy games." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og.png" />
-    <meta name="theme-color" content="#0ea5e9" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50' y='58' text-anchor='middle' font-size='52' font-family='Arial' fill='white'>W</text></svg>">
-    <!-- Localized Dimension assets (copied in-repo) -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-      /* Center custom logo image inside the circular logo */
-      #header .logo { display: grid; place-items: center; }
-      #header .logo img { width: 3.5rem; height: 3.5rem; display: block; }
-      /* Card grid layout reused for Services + Company */
-      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
-      .feature { background: rgba(27,31,34,0.5); border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; padding: 1rem 1.25rem; }
-      .feature h3 { margin: 0 0 0.35rem; letter-spacing: .15rem; text-transform: uppercase; font-weight: 600; }
-      .feature > p { margin: 0 0 .75rem; opacity: .85; }
-      .feature ul { margin: 0; padding-left: 1.1rem; }
-      .feature ul li { margin: .25rem 0; }
-      @media (max-width: 736px) { .features { grid-template-columns: 1fr; } }
-    </style>
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  </head>
-  <body class="is-preload">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Wrobele — Apps, Web Platforms, AI</title>
+  <meta name="description"
+    content="Wrobele design intuitive apps, scalable platforms, and AI solutions that move ideas forward." />
+  <meta property="og:title" content="Wrobele" />
+  <meta property="og:description" content="Apps, web platforms & cozy games." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og.png" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50' y='58' text-anchor='middle' font-size='52' font-family='Arial' fill='white'>W</text></svg>">
+  <!-- Localized Dimension assets (copied in-repo) -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Center custom logo image inside the circular logo */
+    #header .logo {
+      display: grid;
+      place-items: center;
+    }
 
-      <!-- Header -->
-      <header id="header">
-        <div class="logo">
-          <span class="icon"><img src="images/logo-bird.svg" alt="Wrobele logo"></span>
-        </div>
-        <div class="content">
-          <div class="inner">
-            <h1>Wrobele</h1>
-            <p>Apps, web platforms, and bespoke AI solutions.</p>
-          </div>
-        </div>
-        <nav class="use-middle">
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#company">Company</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+    #header .logo img {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: block;
+    }
 
-      <!-- Main -->
-      <div id="main">
+    /* Card grid layout reused for Services + Company */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
 
-        <!-- Services -->
-        <article id="services">
-          <h2 class="major">What we do</h2>
-          <p>We design intuitive apps, scalable platforms, and AI solutions that move ideas forward.</p>
-          <div class="features">
-            <section class="feature">
-              <h3>Mobile & Desktop</h3>
-              <p>Applications for all platforms.</p>
-              <ul>
-                <li>iOS & Android</li>
-                <li>Mac & Windows</li>
-                <li>Browser extensions</li>
-              </ul>
-            </section>
-            <section class="feature">
-              <h3>Web Platforms</h3>
-              <p>Domain-focused web services and integrations.</p>
-              <ul>
-                <li>Built with battle-tested technologies</li>
-                <li>Test-driven development</li>
-              </ul>
-            </section>
-            <section class="feature">
-              <h3>AI solutions</h3>
-              <p>End-to-end AI deployments.</p>
-              <ul>
-                <li>Infrastructure and Ops</li>
-                <li>Training and feature-engineering</li>
-                <li>Inference and Integrations</li>
-              </ul>
-            </section>
-          </div>
-        </article>
+    .feature {
+      background: rgba(27, 31, 34, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+    }
 
-        <!-- Projects -->
-        <article id="projects">
-          <h2 class="major">Projects</h2>
-          <p>Here you can find some of the projects we've released so far:</p>
-          <div class="features">
-            <section class="feature">
-              <h3>Draw Over It</h3>
-              <p>Draw Over It gives presenters, trainers, and any professional an always-ready overlay for live markups.</p>
-              <ul>
-                <li><a href="https://draw.wrobele.com/">Landing page</a></li>
-              </ul>
-              <h3>Buoyant Timer</h3>
-              <p>Always-on-top timer for macOS with countdown and stopwatch, click-through, and customizable appearance.</p>
-              <ul>
-                <li><a href="buoyant-timer/">Support page</a></li>
-              </ul>
-            </section>
-          </div>
-        </article>
+    .feature h3 {
+      margin: 0 0 0.35rem;
+      letter-spacing: .15rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
 
-        <!-- Company -->
-        <article id="company">
-          <h2 class="major">Company details</h2>
-          <div class="features">
-            <section class="feature">
-              <h3>Name</h3>
-              <p>Wrobele sp. z o.o.</p>
-            </section>
-            <section class="feature">
-              <h3>Address</h3>
-              <p>ul. Dyrekcyjna 1-142<br />50-528 Wrocław, Poland</p>
-            </section>
-            <section class="feature">
-              <h3>Email</h3>
-              <p><a href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
-            </section>
-            <section class="feature">
-              <h3>NIP</h3>
-              <p>8993012313</p>
-            </section>
-            <section class="feature">
-              <h3>KRS</h3>
-              <p>0001145726</p>
-            </section>
-            <section class="feature">
-              <h3>D-U-N-S</h3>
-              <p>665212362</p>
-            </section>
-          </div>
-        </article>
+    .feature>p {
+      margin: 0 0 .75rem;
+      opacity: .85;
+    }
 
-        <!-- Contact -->
-        <article id="contact">
-          <h2 class="major">Contact us</h2>
-          <form name="contact" method="post" action="#">
-            <div class="fields">
-              <div class="field">
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="Hi Wrobele!" required />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" required></textarea>
-              </div>
-            </div>
-            <ul class="actions">
-              <li><input type="submit" value="Send" class="primary" /></li>
-              <li><a href="mailto:hello@wrobele.com" class="button">hello@wrobele.com</a></li>
-            </ul>
-          </form>
-          <ul class="icons">
-            <li><a href="https://github.com/wrobeleworks" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          </ul>
-        </article>
+    .feature ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
 
+    .feature ul li {
+      margin: .25rem 0;
+    }
+
+    @media (max-width: 736px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <div class="logo">
+        <span class="icon"><img src="images/logo-bird.svg" alt="Wrobele logo"></span>
       </div>
+      <div class="content">
+        <div class="inner">
+          <h1>Wrobele</h1>
+          <p>Apps, web platforms, and bespoke AI solutions.</p>
+        </div>
+      </div>
+      <nav class="use-middle">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#company">Company</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <p class="copyright">© <span id="y"></span> Wrobele. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-      </footer>
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Services -->
+      <article id="services">
+        <h2 class="major">What we do</h2>
+        <p>We design intuitive apps, scalable platforms, and AI solutions that move ideas forward.</p>
+        <div class="features">
+          <section class="feature">
+            <h3>Mobile & Desktop</h3>
+            <p>Applications for all platforms.</p>
+            <ul>
+              <li>iOS & Android</li>
+              <li>Mac & Windows</li>
+              <li>Browser extensions</li>
+            </ul>
+          </section>
+          <section class="feature">
+            <h3>Web Platforms</h3>
+            <p>Domain-focused web services and integrations.</p>
+            <ul>
+              <li>Built with battle-tested technologies</li>
+              <li>Test-driven development</li>
+            </ul>
+          </section>
+          <section class="feature">
+            <h3>AI solutions</h3>
+            <p>End-to-end AI deployments.</p>
+            <ul>
+              <li>Infrastructure and Ops</li>
+              <li>Training and feature-engineering</li>
+              <li>Inference and Integrations</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+      <!-- Projects -->
+      <article id="projects">
+        <h2 class="major">Projects</h2>
+        <p>Here you can find some of the projects we've released so far:</p>
+        <div class="features">
+          <section class="feature">
+            <h3>Draw Over It</h3>
+            <p>Draw Over It gives presenters, trainers, and any professional an always-ready overlay for live markups.
+            </p>
+            <ul>
+              <li><a href="https://draw.wrobele.com/">Landing page</a></li>
+            </ul>
+          </section>
+          <section class="feature">
+            <h3>Buoyant Timer</h3>
+            <p>Always-on-top timer for macOS with countdown and stopwatch, click-through, and customizable appearance.
+            </p>
+            <ul>
+              <li><a href="buoyant-timer/">Support page</a></li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+      <!-- Company -->
+      <article id="company">
+        <h2 class="major">Company details</h2>
+        <div class="features">
+          <section class="feature">
+            <h3>Name</h3>
+            <p>Wrobele sp. z o.o.</p>
+          </section>
+          <section class="feature">
+            <h3>Address</h3>
+            <p>ul. Dyrekcyjna 1-142<br />50-528 Wrocław, Poland</p>
+          </section>
+          <section class="feature">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@wrobele.com">hello@wrobele.com</a></p>
+          </section>
+          <section class="feature">
+            <h3>NIP</h3>
+            <p>8993012313</p>
+          </section>
+          <section class="feature">
+            <h3>KRS</h3>
+            <p>0001145726</p>
+          </section>
+          <section class="feature">
+            <h3>D-U-N-S</h3>
+            <p>665212362</p>
+          </section>
+        </div>
+      </article>
+
+      <!-- Contact -->
+      <article id="contact">
+        <h2 class="major">Contact us</h2>
+        <form name="contact" method="post" action="#">
+          <div class="fields">
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" placeholder="Hi Wrobele!" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="6" required></textarea>
+            </div>
+          </div>
+          <ul class="actions">
+            <li><input type="submit" value="Send" class="primary" /></li>
+            <li><a href="mailto:hello@wrobele.com" class="button">hello@wrobele.com</a></li>
+          </ul>
+        </form>
+        <ul class="icons">
+          <li><a href="https://github.com/wrobeleworks" class="icon brands fa-github"><span
+                class="label">GitHub</span></a></li>
+        </ul>
+      </article>
 
     </div>
 
-    <!-- BG -->
-    <div id="bg"></div>
+    <!-- Footer -->
+    <footer id="footer">
+      <p class="copyright">© <span id="y"></span> Wrobele. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-      // Set year dynamically
-      (function(){
-        var yEl = document.getElementById('y');
-        if (yEl) yEl.textContent = new Date().getFullYear();
-      })();
+  </div>
 
-      // Mailto form submission
-      (function () {
-        var form = document.querySelector('form[name="contact"]');
-        if (!form) return;
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var message = (form.querySelector('#message') && form.querySelector('#message').value || '').trim();
-          var subjectInput = (form.querySelector('#subject') && form.querySelector('#subject').value || '').trim();
-          var to = 'hello@wrobele.com';
-          var subject = subjectInput || 'Website Contact Form Inquiry';
-          var body = message;
-          var mailto = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-          window.location.href = mailto;
-        });
-      })();
-    </script>
-  </body>
-  </html>
+  <!-- BG -->
+  <div id="bg"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Set year dynamically
+    (function () {
+      var yEl = document.getElementById('y');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+    })();
+
+    // Mailto form submission
+    (function () {
+      var form = document.querySelector('form[name="contact"]');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var message = (form.querySelector('#message') && form.querySelector('#message').value || '').trim();
+        var subjectInput = (form.querySelector('#subject') && form.querySelector('#subject').value || '').trim();
+        var to = 'hello@wrobele.com';
+        var subject = subjectInput || 'Website Contact Form Inquiry';
+        var body = message;
+        var mailto = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
+      });
+    })();
+  </script>
+</body>
+
+</html>
